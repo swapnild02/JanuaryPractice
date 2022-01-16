@@ -11,7 +11,7 @@ public class LoginPage  {
 	
 	By username_txt=By.id("input-email");
 	By password_txt=By.id("input-password");
-	By login_btn=By.className("btn-primary");
+	By login_btn=By.xpath("//input[@class='btn btn-primary']");
 	
 	public LoginPage(WebDriver driver) {
 		this.driver=driver;
@@ -35,10 +35,11 @@ public class LoginPage  {
 		
 	}
 	
-	public void doLoginIn(String username,String password) {
+	public AccountPage doLoginIn(String username,String password) {
 		username(username);
 		password(password);
 		clickLogin();
+		return new AccountPage(driver);
 	}
 	
 	public String loginTitle() {
