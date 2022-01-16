@@ -29,6 +29,10 @@ public class ElementUtility {
 	public void click(By locator) {
 		findElement(locator).click();
 	}
+	
+	public String getTitle() {
+		return driver.getTitle();
+	}
 
 
 }

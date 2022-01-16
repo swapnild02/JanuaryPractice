@@ -40,5 +40,9 @@ public class LoginPage  {
 		password(password);
 		clickLogin();
 	}
+	
+	public String loginTitle() {
+		return elementutility.getTitle();
+	}
 
 }
