@@ -33,6 +33,13 @@ public class ElementUtility {
 	public String getTitle() {
 		return driver.getTitle();
 	}
+	
+	public boolean isDisplayed(By locator) {
+		System.out.println("Is Dispayed "+locator);
+		boolean flag= findElement(locator).isDisplayed();
+		System.out.println("Is Dispayed "+locator+" "+flag);
+		return flag;
+	}
 
 
 }
